@@ -1,0 +1,22 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "Advent of Code 2021",
+  "main": "/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsmedira/advent-of-code-2021.git"
+  },
+  "author": "Nick Smedira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsmedira/advent-of-code-2021/issues"
+  },
+  "homepage": "https://github.com/nsmedira/advent-of-code-2021#readme",
+  "devDependencies": {
+    "eslint": "^8.4.0"
+  }
+}
