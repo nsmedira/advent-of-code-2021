@@ -34,14 +34,12 @@ const simulateLanternfishReproductionWithLessMemory = (days) => {
         let nextCache = { ...cache };
 
         for (const timer in cache) {
-            const remove = () => (nextCache[timer] = (nextCache[timer] || 0) - cache[timer]);
+            nextCache[timer] = (nextCache[timer] || 0) - cache[timer];
 
             if (timer === '0') {
                 ['8', '6'].forEach((nextTimer) => (nextCache[nextTimer] = (nextCache[nextTimer] || 0) + cache[timer]));
-                remove();
             } else {
                 nextCache[timer - 1] = (nextCache[timer - 1] || 0) + cache[timer];
-                remove();
             }
         }
 
