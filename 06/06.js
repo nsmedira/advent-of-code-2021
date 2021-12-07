@@ -53,5 +53,10 @@ const simulateLanternfishReproductionWithLessMemory = (days) => {
         .reduce((total, count) => total + count, 0);
 };
 
+/* ----- PART 1 ----- */
+
 console.log('number of fish after 80 days:', simulateLanternfishReproduction(80));
+
+/* ----- PART 2 ----- */
+
 console.log('number of fish after 256 days:', simulateLanternfishReproductionWithLessMemory(256));
