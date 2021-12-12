@@ -1,9 +1,13 @@
 const { getData } = require('../starter');
 const path = require('path');
 
-const octopi = getData(path.resolve('./input.txt'))
+const data = getData(path.resolve('./input.txt'))
     .slice(0, -1)
     .map((line) => line.split('').map((octopus) => parseInt(octopus)));
+
+let octopi;
+const resetOctopi = () => (octopi = data.map((line) => [...line]));
+resetOctopi();
 
 let totalFlashes = 0;
 let firstSynchronizedFlash = undefined;
@@ -76,6 +80,8 @@ for (let i = 0; i < 100; i++) {
 console.log('total flashes:', totalFlashes);
 
 /* ----- PART 2 ----- */
+
+resetOctopi();
 
 for (let i = 0; firstSynchronizedFlash === undefined; i++) {
     simulateFlashes(i);
