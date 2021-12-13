@@ -20,11 +20,7 @@ const fold = (instruction, dots) => {
         const x = axis === 'y' ? dotToFold[0] : nextAxisValue;
         const y = axis === 'y' ? nextAxisValue : dotToFold[1];
 
-        if (
-            !dots.find((dot) => {
-                return dot[0] === x && dot[1] === y;
-            })
-        ) {
+        if (!dots.find(([x1, y1]) => x1 === x && y1 === y)) {
             dots.push([x, y]);
         }
     }
