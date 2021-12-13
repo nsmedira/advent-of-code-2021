@@ -39,6 +39,8 @@ const fold = (instruction, dots) => {
     }
 };
 
+/* ----- PART 1 ----- */
+
 const part1 = (prevDots) => {
     const dots = prevDots.map((dot) => [...dot]);
 
@@ -48,6 +50,8 @@ const part1 = (prevDots) => {
 };
 
 part1(dots);
+
+/* ----- PART 2 ----- */
 
 const part2 = (prevDots) => {
     const dots = prevDots.map((dot) => [...dot]);
